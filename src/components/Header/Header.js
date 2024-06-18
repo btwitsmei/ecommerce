@@ -1,45 +1,64 @@
-import SearchBar from "../SearchBar/SearchBar";
 import { BiSolidCart } from "react-icons/bi";
 import { BiSolidReceipt } from "react-icons/bi";
 import { BiSolidUser } from "react-icons/bi";
-import "./Header.css";
-import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useAttention } from "../../assets/contexts/AttentionContext";
 
-export default function Header({atention, loggedIn}) {
+import SearchBar from "../SearchBar/SearchBar";
+import "./Header.css";
+import { useAuth } from "../../assets/contexts/AuthContext";
+
+export default function Header({loggedIn}) {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const { attention } = useAttention();
+
     return(
         <header>
-            <h1>Yummy Food</h1>
-            {atention ? <></> : 
+            <button className="boton-header-brand" onClick={() => {if(location.pathname !== "/") navigate("/");}}>
+                <h1>Yummy Food</h1>
+            </button>
+            {attention ? <></> : 
                 <>
                     <SearchBar />
-                    <HeaderButtons loggedIn={loggedIn}/>
+                    <HeaderButtons/>
                 </>
             }
         </header>
     );
 }
 
-function HeaderButtons({loggedIn}) {
+function HeaderButtons() {
+    const { isAuthenticated } = useAuth()
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    function HandleNavigation(url) {
+        if (location.pathname !== url) {
+            navigate(url);
+        }
+    }
+
     return(
         <div className="header-buttons">
-            {loggedIn ? 
+            {isAuthenticated ? 
                 <>
-                <button type="button" className="boton-header">
+                <button className="boton-header" onClick={() => {HandleNavigation("/profile")}}>
                     <BiSolidUser className="img-boton-header"/>
                     <p>Perfil</p>
                 </button>
-                <button type="button" className="boton-header">
-                    <BiSolidReceipt className="img-boton-header"/>
+                <button className="boton-header" onClick={() => {HandleNavigation("/orders")}}>
+                    <BiSolidReceipt className="img-boton-header" />
                     <p>Pedidos</p>
                 </button>
                 </>
                 :
-                <button type="button" className="boton-header-login">
+                <button className="boton-header-login" onClick={() => {HandleNavigation("/login")}}>
                     <BiSolidUser className="img-boton-header"/>
                     <p>Inicia Sesión</p>
                 </button>
             }
-            <button type="button" className="boton-header">
+            <button className="boton-header" onClick={() => {HandleNavigation("/cart")}}>
                 <BiSolidCart className="img-boton-header"/>
                 <p>Carrito</p>
             </button>

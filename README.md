@@ -2,5 +2,9 @@
 e-commerce for the course of hci
 
 ## Librerías utilizadas
-React icons:
+
+React Icons:
 >  npm i react-icons --save
+
+React Router Dom:
+> npm i react-router-dom

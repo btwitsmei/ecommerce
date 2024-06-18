@@ -1,5 +1,13 @@
+.boton-header-brand {
+    width: auto;
+    background-color: var(--primary-color);
+    border: 0;
+    padding: 0.65rem 0;
+    cursor: pointer;
+}
+
 header h1 {
-    width: 20%;
+    width: 100%;
     text-align: start;
 }
 
@@ -18,6 +26,7 @@ header h1 {
     margin: 0;
     padding: 5%;
     font-weight: bold;
+    cursor: pointer;
 }
 
 header p {
@@ -40,6 +49,7 @@ header p {
     border: 0;
     padding: 5% 1%;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .boton-header-login:hover {
