@@ -1,0 +1,33 @@
+header h1 {
+    width: 20%;
+    text-align: start;
+}
+
+.header-buttons {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.boton-header {
+    text-align: center;
+    background-color: var(--primary-color);
+    width: 30%;
+    border: 0;
+    margin: 0;
+    padding: 5%;
+    font-weight: bold;
+}
+
+.boton-header p {
+    margin: 0;
+}
+
+.boton-header:hover {
+    background-color: var(--highlight-color);
+}
+
+.img-boton-header {
+    font-size: 2.2rem;
+}
