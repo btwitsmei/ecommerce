@@ -20,3 +20,12 @@ header {
 
     padding: 0 0 0 2%;
 }
+
+.content {
+    margin: 2%;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+}
