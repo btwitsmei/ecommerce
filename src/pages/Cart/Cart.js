@@ -9,7 +9,7 @@ export default function Cart() {
             name: "Ensalada de rocas lunares",
             price: 24.90,
             quantity: 2,
-            image: "link_to_image",
+            image: "https://www.tapasmagazine.es/wp-content/uploads/2023/06/plato-chino-con-piedras-suodiu.jpg",
         },
         {
             id: 2,
@@ -23,7 +23,7 @@ export default function Cart() {
             name: "Bebida GoSpace",
             price: 2.90,
             quantity: 1,
-            image: "link_to_image",
+            image: "https://cdna.artstation.com/p/assets/images/images/052/826/506/large/kaylee-tbrender-002-50.jpg?1660758848",
         },
     ]);
 
@@ -53,7 +53,6 @@ export default function Cart() {
     );
 
     return(
-        <>
         <div className="shopping-cart">
             <div className="cart-items">
                 <div className="title">
@@ -93,7 +92,6 @@ export default function Cart() {
                         <p>Servicio</p>
                         <p>S/. 4.99</p>
                     </div>
-                    <br />
                     <hr />
                     <div className="costo">
                         <p><b>Total:</b></p>
@@ -101,25 +99,29 @@ export default function Cart() {
                     </div>
                 </div>
                 <div className="order-summary-box">
-                    <span>Fecha de Entrega</span>
-                    <select onChange={handleChangeTime}>
-                        <option value="true">Ahora</option>
-                        <option value="false">Después</option>
-                    </select>
-                    {timeEnvio?
-                    <select>
-                        <option value="true">15:00</option>
-                        <option value="false">16:00</option>
-                    </select> :
-                    <></>
-                    }
-                </div>
-                <div className="order-summary-box">
                     <span>Dirección de Entrega</span>
                     <select>
                         <option value="1">Mi casa</option>
                         <option value="2">Casa de amiga</option>
                     </select>
+                </div>
+                <div className="order-summary-box" id="timeSelection">
+                    <div className="timeSelection">
+                        <span>Fecha de Entrega</span>
+                        <select className="timeSelect" onChange={handleChangeTime}>
+                            <option value="true">Ahora</option>
+                            <option value="false">Después</option>
+                        </select>
+                    </div>
+                    {timeEnvio &&
+                    <div className="timeSelection">
+                    <span>Hora</span>
+                        <select className="timeSelect">
+                            <option value="true">15:00</option>
+                            <option value="false">16:00</option>
+                        </select>
+                    </div>
+                    }
                 </div>
                 <div className="order-summary-box">
                     <span>Método de Pago</span>
@@ -132,6 +134,5 @@ export default function Cart() {
                 <button className="checkout-button">Comprar</button>
             </div>
         </div>
-        </>
     );
 }

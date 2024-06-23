@@ -1,0 +1,38 @@
+.orderDetails {
+    margin: 1.5%;
+    width: 93%;
+}
+
+.orderDetails table {
+    width: 100%;
+    margin-left: 0.7%;
+}
+
+.orderDetails hr {
+    margin-top: 0;
+}
+
+.producto {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1%;
+}
+
+.producto td p {
+    margin: 0;
+}
+
+.productos td:first-child {
+    font-weight: bold;
+    width: 88%;
+}
+
+.total {
+    text-align: right;
+    margin-right: 3%;
+}
+
+.total p:last-child {
+    font-size: calc(var(--font-size) + 6px);
+}

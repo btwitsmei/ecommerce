@@ -11,6 +11,8 @@ import Orders from './pages/Orders/Orders';
 import Profile from './pages/Profile/Profile';
 import ProtectedRoute from './components/ProtectedRoute';
 import Footer from './components/Footer/Footer';
+import Address from './pages/Address/Address';
+import OrderDetails from './pages/OrderDetails/OrderDetails';
 
 const SetAttention = ({att, children}) => {
   const {attention, setAttention} = useAttention();
@@ -42,10 +44,22 @@ function App() {
                   <SetAttention att={false}><Orders /></SetAttention>
                 </ProtectedRoute>
               }/>
+              
+              <Route path="/orders/:id" element={
+                <ProtectedRoute>
+                  <SetAttention att={false}><OrderDetails /></SetAttention>
+                </ProtectedRoute>
+              }/>
 
               <Route path="/profile" element={
                 <ProtectedRoute>
                   <SetAttention att={false}><Profile /></SetAttention>
+                </ProtectedRoute>
+              }/>
+
+              <Route path="/profile/address" element={
+                <ProtectedRoute>
+                  <SetAttention att={false}><Address /></SetAttention>
                 </ProtectedRoute>
               }/>
               
