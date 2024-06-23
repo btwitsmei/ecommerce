@@ -8,6 +8,7 @@
 
 header h1 {
     width: 100%;
+    font-size: calc(var(--font-size) * 2);
     text-align: start;
 }
 

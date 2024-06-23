@@ -63,6 +63,7 @@
 .AMC-Select select {
     width: 60%;
     height: 1.5rem;
+    font-size: calc(var(--font-size) - 2px);
 }
 
 .grid-container {

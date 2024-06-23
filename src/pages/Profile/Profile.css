@@ -49,6 +49,7 @@
     border-radius: 2rem;
     font-weight: bold;
     cursor: pointer;
+    font-size: calc(var(--font-size) - 2px);
 }
 
 .informacion-boton {
@@ -60,6 +61,7 @@
     border: 0;
     cursor: pointer;
     font-weight: bold;
+    font-size: calc(var(--font-size) - 2px);
 }
 
 .direccion-botones {
@@ -82,5 +84,5 @@
 }
 
 .img-boton-direccion {
-    font-size: 1.3rem;
+    font-size: calc(var(--font-size) + 0.3em);
 }

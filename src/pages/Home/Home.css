@@ -14,7 +14,7 @@
   
   .category, .product {
     text-align: center;
-    font-size: 18px;
+    font-size: calc(var(--font-size) + 2px);
   }
   
   .category-image, .product-image {
@@ -28,9 +28,8 @@
     height: 300px;
   }
   
-
   .popular-categories h2, .best-selling-products h2{
-    font-size: 30px;
+    font-size: calc(var(--font-size) + 14px);
     text-align: center;
   }
 
