@@ -9,7 +9,7 @@ export default function Home() {
         {
             id: 1,
             name: "Ensalada de rocas lunares",
-            image: "link_to_image",
+            image: "https://www.tapasmagazine.es/wp-content/uploads/2023/06/plato-chino-con-piedras-suodiu.jpg",
         },
         {
             id: 2,
@@ -19,7 +19,7 @@ export default function Home() {
         {
             id: 3,
             name: "Bebida GoSpace",
-            image: "link_to_image",
+            image: "https://cdna.artstation.com/p/assets/images/images/052/826/506/large/kaylee-tbrender-002-50.jpg?1660758848",
         },
     ]);
 
@@ -51,8 +51,12 @@ export default function Home() {
                     </div>
                 </section>
 
+                <br/>
+
+
                 <section className="best-selling-products">
                     <h2>PRODUCTOS MÁS VENDIDOS</h2>
+                    <br/>
                     <div className="products">
                     
                         {products.map((item) => (
@@ -71,6 +75,7 @@ export default function Home() {
                         ))}
                     </div>
                 </section>
+                <br/><br/>
             </main>
         </div>
         </div>
