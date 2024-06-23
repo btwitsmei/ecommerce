@@ -48,3 +48,7 @@
 #footer-logo {
     text-align: right;
 }
+
+#footer-logo h4 {
+    text-align: left;
+}

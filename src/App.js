@@ -3,7 +3,7 @@ import { AuthProvider } from './assets/contexts/AuthContext';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import { AttentionProvider, useAttention } from './assets/contexts/AttentionContext';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Cart from './pages/Cart/Cart';
 import Orders from './pages/Orders/Orders';
 import Profile from './pages/Profile/Profile';
@@ -29,12 +29,18 @@ const SetAttention = ({att, children}) => {
 }
 
 function App() {
+  const [viewImage, setViewImage] = useState(true);
+
+  function handleImageView() {
+    setViewImage(!viewImage);
+  }
+
   return(
     <AuthProvider>
       <AttentionProvider>
         <BrowserRouter>
-          <AccessibilityButton />
-          <Header />
+          <AccessibilityButton func={handleImageView}/>
+          <Header view={viewImage}/>
             <Routes>
               <Route path="/" element={<SetAttention att={false}><Home /></SetAttention>}/>
               <Route path="/login" element={<SetAttention att={true}><Login /></SetAttention>}/>
@@ -72,7 +78,7 @@ function App() {
               }/>
               
             </Routes>
-          <Footer />
+          <Footer view={viewImage} />
         </BrowserRouter>
       </AttentionProvider>
     </AuthProvider>

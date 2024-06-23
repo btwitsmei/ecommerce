@@ -9,7 +9,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import logo from "../../assets/images/extended_logo.png";
 import "./Header.css";
 
-export default function Header({loggedIn}) {
+export default function Header({view}) {
     const navigate = useNavigate();
     const location = useLocation();
     const { attention } = useAttention();
@@ -17,7 +17,7 @@ export default function Header({loggedIn}) {
     return(
         <header>
             <button className="boton-header-brand" onClick={() => {if(location.pathname !== "/") navigate("/");}}>
-                {/* <h1>Yummy Food</h1> */}
+                {!view ? <h1>Yummy Food</h1> : <></>}
                 <img src={logo} alt="Yummy Food Logo" className="img-logo-header" />
             </button>
             {attention ? <></> : 
