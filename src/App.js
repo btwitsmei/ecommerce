@@ -13,6 +13,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Footer from './components/Footer/Footer';
 import Address from './pages/Address/Address';
 import OrderDetails from './pages/OrderDetails/OrderDetails';
+import ProductDetails from './pages/ProductDetails/ProductDetails';
 import AccessibilityButton from './components/Accessibility/AccessibilityButton';
 
 const SetAttention = ({att, children}) => {
@@ -62,6 +63,12 @@ function App() {
               <Route path="/profile/address" element={
                 <ProtectedRoute>
                   <SetAttention att={false}><Address /></SetAttention>
+                </ProtectedRoute>
+              }/>
+
+              <Route path="/products/:id" element={
+                <ProtectedRoute>
+                  <SetAttention att={false}><ProductDetails /></SetAttention>
                 </ProtectedRoute>
               }/>
               
