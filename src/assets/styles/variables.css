@@ -1,3 +1,5 @@
+@import "../fonts/fonts.css";
+
 :root {
     --background-color: white;
     --text-color: black;
@@ -8,11 +10,13 @@
     --h2-font-size: 2rem;
     --label-font-size: 1.5rem;
     --font-size: 1em;
+    --dyslexic-font-size: 0.85em;
     --button-font-size: 1.5rem;
 }
 
 body.aumentado {
-    --font-size: 18px; /* Cambiar el tamaño de la fuente cuando aumentado */
+    --font-size: 18px;
+    --dyslexic-font-size: 0.905em;
 }
 
 /* Estilo para el alto contraste */
@@ -23,8 +27,14 @@ body.alto-contraste {
 }
 
 /* Estilo para el cambio de fuente */
-body.cambiar-fuente {
-    font-family: Arial, sans-serif; /* Cambiar a una fuente más accesible */
+body.cambiar-fuente,
+body.cambiar-fuente p,
+body.cambiar-fuente span,
+body.cambiar-fuente option,
+body.cambiar-fuente select,
+body.cambiar-fuente h1 {
+    font-family: "OpenDyslexic", Arial, sans-serif; /* Cambiar a una fuente más accesible */
+    --font-size: var(--dyslexic-font-size);
 }
 
 /* Estilo para el espacio entre palabras */
@@ -44,7 +54,7 @@ body.alineacion-texto {
 
 /* Estilo para la saturación */
 body.saturacion::before {
-    content: '';
+    content: "";
     position: fixed;
     top: 0;
     left: 0;

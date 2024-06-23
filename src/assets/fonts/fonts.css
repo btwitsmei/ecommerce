@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "OpenDyslexic";
+    src: url("./OpenDyslexic-Regular.otf") format("opentype"),
+        url("./OpenDyslexic-Bold.otf") format("opentype"),
+        url("./OpenDyslexic-Italic.otf") format("opentype"),
+        url("./OpenDyslexic-Bold-Italic.otf") format("opentype");
+        font-weight: normal;
+        font-style: normal;
+    }

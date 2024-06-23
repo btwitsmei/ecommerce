@@ -18,7 +18,7 @@ export default function AccessibilityButton() {
     const buttons = [
         { id: 1, label: "Texto más grande", icon: <AiOutlineFontSize />, className: "aumentado"},
         { id: 2, label: "Contraste", icon: <RiContrastFill /> , className: "alto-contraste"},
-        { id: 3, label: "Fuente", icon: <BsAlphabet />, className: "cambiar-fuente"},
+        { id: 3, label: "Fuente para dislexicos", icon: <BsAlphabet />, className: "cambiar-fuente"},
         { id: 4, label: "Espacio entre palabras", icon: <RxLetterSpacing />, className: "espacio-entre-palabras"},
         { id: 5, label: "Espacio entre líneas", icon: <MdOutlineFormatLineSpacing />, className: "espacio-entre-lineas"},
         { id: 6, label: "Alineación de Texto", icon: <BsTextCenter />, className: "alineacion-texto"},

@@ -48,7 +48,7 @@ function Pedido({ id, restaurante, totalPagado, fecha }) {
                 <div className="pedido-fecha">
                     <p><b>Fecha:</b> {fecha}</p>
                 </div>
-                <button className="ver-detalles" onClick={() => navigate("/orders/"+id)}>Ver Detalles</button>
+                <button className="ver-detalles" onClick={() => navigate("/orders/"+id)}><span>Ver Detalles</span></button>
             </div>
         </div>
     );

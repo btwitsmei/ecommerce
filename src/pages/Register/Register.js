@@ -13,7 +13,7 @@ function RegisterForm() {
     };
 
     return (
-        <div className="col-md-6">
+        <div className="col-md">
             <div className="form-container">
                 <div className="card-body">
                     <h2 className="card-title text-center">REGISTRARSE</h2>

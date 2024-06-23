@@ -13,18 +13,19 @@
 }
 
 .AButton:first-child {
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 .AccessibilityMenu {
     position: fixed;
     height: 100vh;
-    width: 25%;
-    max-width: 25%;
+    width: 26%;
+    max-width: 26%;
     top: 0;
     right: 0;
     background-color: var(--background-color);
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    border-left: 1px solid var(--secondary-color);
     z-index: 10;
 }
 
@@ -35,6 +36,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 2% 3%;
+    border-bottom: 1px solid #e7e7e7;
 }
 
 .AMButton {
@@ -44,7 +46,8 @@
 }
 
 .AMT-icon {
-    font-size: 2rem;
+    font-size: calc(var(--original-font-size) * 2);
+    color: var(--text-color);
 }
 
 .AMenuContent {
@@ -64,7 +67,7 @@
 .AMC-Select select {
     width: 60%;
     height: 1.5rem;
-    font-size: calc(var(--font-size) - 2px);
+    font-size: calc(var(--original-font-size)) !important;
 }
 
 .grid-container {
@@ -81,7 +84,7 @@
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
-    font-size: calc(var(--font-size) + 4px);
+    font-size: calc(var(--original-font-size) + 4px);
 }
 
 .grid-item p {

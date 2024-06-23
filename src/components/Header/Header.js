@@ -17,7 +17,8 @@ export default function Header({loggedIn}) {
     return(
         <header>
             <button className="boton-header-brand" onClick={() => {if(location.pathname !== "/") navigate("/");}}>
-                <h1>Yummy Food</h1>
+                {/* <h1>Yummy Food</h1> */}
+                <img src={logo} alt="Yummy Food Logo" className="img-logo-header" />
             </button>
             {attention ? <></> : 
                 <>

@@ -1,9 +1,21 @@
 .boton-header-brand {
     width: auto;
+    display: block;
     background-color: var(--primary-color);
     border: 0;
     padding: 0.65rem 0;
     cursor: pointer;
+    width: 25%;
+    max-height: 50rem;
+}
+
+.img-logo-header {
+    width: 42%;
+    float: left;
+}
+
+header {
+    border-bottom: 1px solid #e7e7e7;
 }
 
 header h1 {

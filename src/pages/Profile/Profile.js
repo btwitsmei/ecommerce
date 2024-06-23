@@ -36,15 +36,15 @@ export default function Profile() {
         <div className="informacion">
             <h2>Información de Perfil</h2>
             <div className="info-usuario-dato">
-                <span>Nombre de Usuario</span>
+                <span><b>Nombre de Usuario</b></span>
                 <span>{infoPerfil.usuario}</span>
             </div>
             <div className="info-usuario-dato">
-                <span>Nombre Completo</span>
+                <span><b>Nombre Completo</b></span>
                 <span>{infoPerfil.nombre}</span>
             </div>
             <div className="info-usuario-dato">
-                <span>Correo Electrónico</span>
+                <span><b>Correo Electrónico</b></span>
                 <span>{infoPerfil.correo}</span>
             </div>
         </div>
@@ -66,9 +66,9 @@ export default function Profile() {
                     </div>
                 </div>
             ))}
-            <button className="agregar-direccion-boton" onClick={() => navigate("/profile/address")}>Agregar Dirección</button>
+            <button className="agregar-direccion-boton" onClick={() => navigate("/profile/address")}><span>Agregar Dirección</span></button>
         </div>
-        <button className="informacion-boton">Cambiar Contraseña</button>
+        <button className="informacion-boton"><span>Cambiar Contraseña</span></button>
         </div>
     );
 }
