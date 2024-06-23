@@ -13,7 +13,7 @@ export default function Address() {
     };
 
     return (
-    <>
+    <div className='content'>
     <h1>Agregar Dirección</h1>
     <div className="add-address">
       <div className="form-group">
@@ -43,6 +43,6 @@ export default function Address() {
         Agregar Dirección
       </button>
     </div>
-    </>
+    </div>
   );
 }

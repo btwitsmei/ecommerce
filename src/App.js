@@ -35,7 +35,6 @@ function App() {
         <BrowserRouter>
           <AccessibilityButton />
           <Header />
-          <div className='content'>
             <Routes>
               <Route path="/" element={<SetAttention att={false}><Home /></SetAttention>}/>
               <Route path="/login" element={<SetAttention att={true}><Login /></SetAttention>}/>
@@ -73,7 +72,6 @@ function App() {
               }/>
               
             </Routes>
-          </div>
           <Footer />
         </BrowserRouter>
       </AttentionProvider>

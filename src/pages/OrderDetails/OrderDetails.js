@@ -43,7 +43,7 @@ export default function OrderDetails() {
     }
 
     return (
-        <>
+        <div className='content'>
             <h1>Pedido #{orderDetail.id}</h1>
             <h2>Estado del Pedido</h2>
             <div className="progress">
@@ -83,6 +83,6 @@ export default function OrderDetails() {
                     <p><b>Total:</b> S/. {(orderDetail.productos.reduce((sum, producto) => sum + producto.precio, 0) + 2.99 + 4.99).toFixed(2)}</p>
                 </div>
             </div>
-        </>
+        </div>
     );
 }

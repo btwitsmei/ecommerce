@@ -24,6 +24,7 @@ export default function Home() {
     ]);
 
     return (
+        <div className='content'>
         <div className="homepage">
             <main className="main-content">
                 <section className="popular-categories">
@@ -71,6 +72,7 @@ export default function Home() {
                     </div>
                 </section>
             </main>
+        </div>
         </div>
     );
 }

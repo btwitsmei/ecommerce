@@ -35,7 +35,7 @@ export default function ProductDetails() {
     }
 
     return (
-        <>
+        <div className='content'>
         <div className="product">
         <h1>{productDetail.name}</h1>
             <div className="productDetails">
@@ -45,6 +45,6 @@ export default function ProductDetails() {
                 <p className="desc"><b>Description:</b> {productDetail.description}</p>
             </div>
         </div>
-        </>
+        </div>
     );
 }

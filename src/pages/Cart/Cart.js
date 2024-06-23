@@ -53,6 +53,7 @@ export default function Cart() {
     );
 
     return(
+        <div className='content'>
         <div className="shopping-cart">
             <div className="cart-items">
                 <div className="title">
@@ -133,6 +134,7 @@ export default function Cart() {
                 </div>
                 <button className="checkout-button">Comprar</button>
             </div>
+        </div>
         </div>
     );
 }

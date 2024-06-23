@@ -17,6 +17,7 @@ export default function Orders() {
     ];
 
     return (
+        <div className='content'>
         <div className="pedidos">
             <h1>Pedidos</h1>
             {pedidos.map((pedido) => (
@@ -28,6 +29,7 @@ export default function Orders() {
                     fecha={pedido.fecha}
                 />
             ))}
+        </div>
         </div>
     );
 }

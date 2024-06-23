@@ -31,7 +31,7 @@ export default function Profile() {
     }
 
     return(
-        <>
+        <div className='content'>
         <h1>Tu Perfil</h1>
         <div className="informacion">
             <h2>Información de Perfil</h2>
@@ -69,6 +69,6 @@ export default function Profile() {
             <button className="agregar-direccion-boton" onClick={() => navigate("/profile/address")}>Agregar Dirección</button>
         </div>
         <button className="informacion-boton">Cambiar Contraseña</button>
-        </>
+        </div>
     );
 }
