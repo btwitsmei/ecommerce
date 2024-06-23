@@ -1,7 +1,7 @@
 .container {
     display: flex;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     flex-direction: row;
     height: 50rem;
     overflow: hidden;
@@ -20,7 +20,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-
+    padding-bottom: 1.5rem;
 }
 .form-container {
     border-radius: 1rem;
@@ -42,7 +42,7 @@
 
 .mb-3 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .form-container a {
     color: var(--text-color);
@@ -66,11 +66,14 @@
 
 .btn {
     padding: 10px;
+    width: 70%;
     color: var(--text-color);
     background-color: var(--background-color);
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    font-size: var(--button-font-size);
+    font-weight: bolder;
 }
 
 .btn:hover {
