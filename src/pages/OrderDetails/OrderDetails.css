@@ -36,3 +36,66 @@
 .total p:last-child {
     font-size: calc(var(--font-size) + 6px);
 }
+
+/* Barra de progreso */
+.progress {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.step {
+    position: relative;
+    width: 25%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.step .icon {
+    display: inline-block;
+    border-radius: 50%;
+    font-size: calc(var(--font-size) + 4px);
+    background-color: #e0e0e0;
+    padding: 4.2% 5%;
+    aspect-ratio: 1;
+    color: black;
+    border: 2px solid black;
+}
+
+.step.active .icon {
+    background-color: #228b22;
+    color: #ffffff;
+}
+
+.step::after {
+    width: 100%;
+    content: "";
+    position: absolute;
+    top: 40%;
+    height: 4%;
+    background-color: #b0b0b0;
+    z-index: -1;
+}
+
+.step:first-child::after {
+    left: calc(50% + 15px); /* 15px es la mitad del icono */
+}
+
+
+.step:not(:first-child)::after {
+    left: -50%;
+}
+
+.step.complete::after {
+    background-color: #228b22;
+}
+
+.step.active::after {
+    background-color: #228b22;
+}
+
+.step .text {
+    display: block;
+    margin-top: 5px;
+}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import "./OrderDetails.css";
+import { FaCalendarAlt, FaHourglassStart, FaTruck, FaCheck } from 'react-icons/fa';
 
 export default function OrderDetails() {
     const { id } = useParams();
@@ -11,7 +12,7 @@ export default function OrderDetails() {
             id: 123456,
             restaurante: "Ejemplix",
             direccion: "Av. del Ejemplo 1234",
-            estado: 3,
+            estado: 1,
             productos: [
                 {
                     nombre: "Producto 1",
@@ -48,27 +49,18 @@ export default function OrderDetails() {
             <h1>Pedido #{orderDetail.id}</h1>
             <h2>Estado del Pedido</h2>
             <div className="progress">
-                <div className="step complete">
+            {statuses.map((status, index) => (
+                <div key={index} className={`step ${orderDetail.estado === index ? 'active' : ''}`}>
                     <span className="icon">
-                        <i className="fas fa-calendar-alt"></i>
+                        {index === 0 && <FaCalendarAlt />}
+                        {index === 1 && <FaHourglassStart />}
+                        {index === 2 && <FaTruck />}
+                        {index === 3 && <FaCheck />}
                     </span>
+                    <span className="text">{status}</span>
                 </div>
-                <div className="step complete">
-                    <span className="icon">
-                        <i className="fas fa-hourglass-start"></i>
-                    </span>
-                </div>
-                <div className="step active">
-                    <span className="icon">
-                        <i className="fas fa-truck"></i>
-                    </span>
-                </div>
-                <div className="step">
-                    <span className="icon">
-                        <i className="fas fa-check"></i>
-                    </span>
-                </div>
-            </div>
+            ))}
+        </div>
             <h2>Detalles del Pedido</h2>
             <div className="orderDetails">
                 <p><b>Restaurante:</b> {orderDetail.restaurante}</p>
