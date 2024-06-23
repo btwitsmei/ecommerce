@@ -1,0 +1,92 @@
+.AButton {
+    background-color: var(--primary-color);
+    color: black;
+    border: 0;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    padding: 1% 1% 0.6% 1%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.AButton:first-child {
+    font-size: 2rem;
+}
+
+.AccessibilityMenu {
+    position: fixed;
+    height: 100vh;
+    width: 25%;
+    max-width: 25%;
+    top: 0;
+    right: 0;
+    background-color: var(--background-color);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.AMenuTitle {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 3%;
+}
+
+.AMButton {
+    background-color: var(--primary-color);
+    border: 0;
+    cursor: pointer;
+}
+
+.AMT-icon {
+    font-size: 2rem;
+}
+
+.AMenuContent {
+    margin: 3%;
+}
+
+.AMC-Select {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+    height: 2rem;
+}
+
+.AMC-Select select {
+    width: 60%;
+    height: 1.5rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2% 2%;
+}
+
+.grid-item {
+    padding: 1%;
+    aspect-ratio: 1.4;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-size: calc(var(--font-size) + 4px);
+}
+
+.grid-item p {
+    margin: 0;
+}
+
+.grid-item p:first-child {
+    font-size: calc(var(--font-size) + 24px);
+    margin: 0;
+}

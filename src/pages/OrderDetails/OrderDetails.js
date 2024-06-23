@@ -1,13 +1,11 @@
-import { useState } from "react";
 import { useParams } from "react-router-dom";
 import "./OrderDetails.css";
 import { FaCalendarAlt, FaHourglassStart, FaTruck, FaCheck } from 'react-icons/fa';
 
 export default function OrderDetails() {
     const { id } = useParams();
-    const [status, setStatus] = useState(3);
     const statuses = ["Recibido","En preparación","En camino","Entregado"];
-    const [details, setDetails] = useState([
+    const details = [
         {
             id: 123456,
             restaurante: "Ejemplix",
@@ -36,7 +34,7 @@ export default function OrderDetails() {
                 }
             ],
         }
-    ]);
+    ];
 
     const orderDetail = details.find(detail => detail.id === parseInt(id));
 

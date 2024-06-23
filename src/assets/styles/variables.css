@@ -6,3 +6,7 @@
     --action-color: #6677F2;
     --font-size: 16px
 }
+
+body.aumentado {
+    --font-size: 18px; /* Cambiar el tamaño de la fuente cuando aumentado */
+}

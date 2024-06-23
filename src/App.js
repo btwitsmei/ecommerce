@@ -13,6 +13,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Footer from './components/Footer/Footer';
 import Address from './pages/Address/Address';
 import OrderDetails from './pages/OrderDetails/OrderDetails';
+import AccessibilityButton from './components/Accessibility/AccessibilityButton';
 
 const SetAttention = ({att, children}) => {
   const {attention, setAttention} = useAttention();
@@ -31,6 +32,7 @@ function App() {
     <AuthProvider>
       <AttentionProvider>
         <BrowserRouter>
+          <AccessibilityButton />
           <Header />
           <div className='content'>
             <Routes>
