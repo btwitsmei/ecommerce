@@ -1,0 +1,52 @@
+.add-address {
+    max-width: 40%;
+    margin: auto;
+    padding: 2%;
+    border-radius: 2rem;
+    background-color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 2%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1% 2%;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.map-container {
+    margin-bottom: 1%;
+}
+
+.map-container img {
+    border-radius: 4px;
+    width: 100%;
+    max-height: 20%;
+    height: 20%;
+}
+
+.add-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--action-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-button:hover {
+    background-color: #4500a5;
+}

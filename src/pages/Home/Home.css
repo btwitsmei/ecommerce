@@ -1,0 +1,36 @@
+
+  .main-content {
+    padding: 20px;
+  }
+  
+  .popular-categories, .best-selling-products {
+    margin-bottom: 20px;
+  }
+  
+  .categories, .products {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .category, .product {
+    text-align: center;
+  }
+  
+  .category-image, .product-image {
+    width: 300px;
+    height: 300px;
+    background-color: #ddd;
+    margin-bottom: 10px;
+  }
+
+  .product-image img {
+    width: 300px;
+    height: 300px;
+  }
+  
+
+  .popular-categories h2, .best-selling-products h2{
+    font-size: 30px;
+    text-align: center;
+  }
+  

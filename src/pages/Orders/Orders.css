@@ -1,0 +1,31 @@
+.pedido {
+    width: 70%;
+    margin: auto;
+    background-color: var(--primary-color);
+    padding: 0.8% 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 2rem;
+    margin-bottom: 1%;
+}
+
+.pedido:last-child {
+    margin-bottom: 0;
+}
+
+.pedido-der {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.ver-detalles {
+    border: 0;
+    background-color: var(--background-color);
+    border-radius: 2rem;
+    font-weight: bold;
+    padding: 3% 0;
+}

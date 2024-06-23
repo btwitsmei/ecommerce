@@ -8,3 +8,6 @@ React Icons:
 
 React Router Dom:
 > npm i react-router-dom
+
+Mapa Leaflet:
+> npm i react-leaflet leaflet
