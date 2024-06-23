@@ -29,7 +29,7 @@
   }
   
 
-  h2{
+  .popular-categories h2, .best-selling-products h2{
     font-size: 30px;
     text-align: center;
   }
