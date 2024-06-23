@@ -1,0 +1,37 @@
+
+.product {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    
+}
+.productDetails {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .productDetails img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .productDetails .price {
+    align-self: flex-end;
+  }
+  .productDetails .desc {
+    align-self: flex-start;
+  }
+  
+  .product-card button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

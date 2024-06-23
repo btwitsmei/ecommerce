@@ -57,12 +57,16 @@ export default function Home() {
                         {products.map((item) => (
                             <button onClick={() => navigate("/products/" + item.id)} key={item.id}>
                                 <div className="product-image">
+                                    
                                     <img src={item.image} alt={item.name} />
+                                    
                                     <div className="product">
                                         <h4>{item.name}</h4>
                                     </div>
+                                    
                                 </div>
-                            </button>
+                                </button>
+                            
                         ))}
                     </div>
                 </section>
