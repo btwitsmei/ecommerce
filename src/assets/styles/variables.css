@@ -1,9 +1,9 @@
 :root {
     --background-color: white;
     --text-color: black;
-    --primary-color: #D9D9D9;
-    --highlight-color: #AAAAAA;
-    --action-color: #6677F2;
+    --primary-color: #d9d9d9;
+    --highlight-color: #aaaaaa;
+    --action-color: #6677f2;
     --h2-font-size: 2rem;
     --label-font-size: 1.5rem;
     --font-size: 1em;
@@ -12,4 +12,40 @@
 
 body.aumentado {
     --font-size: 18px; /* Cambiar el tamaño de la fuente cuando aumentado */
+}
+
+/* Estilo para el alto contraste */
+body.alto-contraste {
+    background-color: black;
+    color: white;
+}
+
+/* Estilo para el cambio de fuente */
+body.cambiar-fuente {
+    font-family: Arial, sans-serif; /* Cambiar a una fuente más accesible */
+}
+
+/* Estilo para el espacio entre palabras */
+body.espacio-entre-palabras {
+    word-spacing: 0.2em;
+}
+
+/* Estilo para el espacio entre líneas */
+body.espacio-entre-lineas {
+    line-height: 2;
+}
+
+/* Estilo para la alineación del texto */
+body.alineacion-texto {
+    text-align: center; /* Alineación del texto al centro */
+}
+
+/* Estilo para la saturación */
+body.saturacion {
+    filter: grayscale(100%);
+}
+
+/* Estilo para quitar imágenes */
+body.quitar-imagenes img {
+    display: none;
 }

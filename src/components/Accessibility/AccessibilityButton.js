@@ -10,28 +10,20 @@ import "./AccessibilityButton.css";
 
 export default function AccessibilityButton() {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [aumentado, setAumentado] = useState(false); // Estado para controlar si el tamaño está aumentado o no
 
-    // Función para alternar entre aumentar y volver al tamaño normal
-    const alternarTamano = () => {
-        setAumentado(!aumentado); // Cambiar el estado de aumentado
-        console.log("Aumentando de tamaño");
-        if (!aumentado) {
-            document.body.classList.add('aumentado');
-          } else {
-            document.body.classList.remove('aumentado');
-          }
-    };
+    const toggleClass = (className) => {
+        document.body.classList.toggle(className)
+    }
 
     const buttons = [
-        { id: 1, label: "Texto más grande", icon: <AiOutlineFontSize />, funcion: () => alternarTamano() },
-        { id: 2, label: "Contraste", icon: <RiContrastFill /> , funcion: null},
-        { id: 3, label: "Fuente", icon: <BsAlphabet />, funcion: null },
-        { id: 4, label: "Espacio entre palabras", icon: <RxLetterSpacing />, funcion: null },
-        { id: 5, label: "Espacio entre líneas", icon: <MdOutlineFormatLineSpacing />, funcion: null},
-        { id: 6, label: "Alineación de Texto", icon: <BsTextCenter />, funcion: null },
-        { id: 7, label: "Saturación", icon: <RiContrastDropFill />, funcion: null },
-        { id: 8, label: "Quitar Imágenes", icon: <LuImageOff />, funcion: null },
+        { id: 1, label: "Texto más grande", icon: <AiOutlineFontSize />, className: "aumentado"},
+        { id: 2, label: "Contraste", icon: <RiContrastFill /> , className: "alto-contraste"},
+        { id: 3, label: "Fuente", icon: <BsAlphabet />, className: "cambiar-fuente"},
+        { id: 4, label: "Espacio entre palabras", icon: <RxLetterSpacing />, className: "espacio-entre-palabras"},
+        { id: 5, label: "Espacio entre líneas", icon: <MdOutlineFormatLineSpacing />, className: "espacio-entre-lineas"},
+        { id: 6, label: "Alineación de Texto", icon: <BsTextCenter />, className: "alineacion-texto"},
+        { id: 7, label: "Saturación", icon: <RiContrastDropFill />, className: "saturacion"},
+        { id: 8, label: "Quitar Imágenes", icon: <LuImageOff />, className: "quitar-imagenes"},
     ];
 
     const handleButtonClick = () => {
@@ -66,7 +58,7 @@ export default function AccessibilityButton() {
                         </div>
                         <div className="grid-container">
                             {buttons.map((button) => (
-                                <button key={button.id} className="grid-item" onClick={button.funcion}>
+                                <button key={button.id} className="grid-item" onClick={() => toggleClass(button.className)}>
                                     <p>
                                         {button.icon != null ? (
                                             button.icon

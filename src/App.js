@@ -2,8 +2,6 @@ import Header from './components/Header/Header';
 import { AuthProvider } from './assets/contexts/AuthContext';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home/Home';
-import Login from './pages/Login/Login';
-import Signup from './pages/Signup/Signup';
 import { AttentionProvider, useAttention } from './assets/contexts/AttentionContext';
 import { useEffect } from 'react';
 import Cart from './pages/Cart/Cart';
@@ -15,6 +13,8 @@ import Address from './pages/Address/Address';
 import OrderDetails from './pages/OrderDetails/OrderDetails';
 import ProductDetails from './pages/ProductDetails/ProductDetails';
 import AccessibilityButton from './components/Accessibility/AccessibilityButton';
+import Register from './pages/Register/Register';
+import Login from './pages/Login/Login';
 
 const SetAttention = ({att, children}) => {
   const {attention, setAttention} = useAttention();
@@ -38,7 +38,7 @@ function App() {
             <Routes>
               <Route path="/" element={<SetAttention att={false}><Home /></SetAttention>}/>
               <Route path="/login" element={<SetAttention att={true}><Login /></SetAttention>}/>
-              <Route path="/register" element={<SetAttention att={false}><Signup /></SetAttention>}/>
+              <Route path="/register" element={<SetAttention att={true}><Register /></SetAttention>}/>
               <Route path="/cart" element={<SetAttention att={false}><Cart /></SetAttention>}/>
               
               <Route path="/orders" element={

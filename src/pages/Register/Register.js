@@ -1,0 +1,70 @@
+import React, { useState } from 'react';
+import './Register.css';
+import PlanetForm from '../../components/Planet-form/PlanetForm';
+function RegisterForm() {
+    const [email, setEmail] = useState('');
+    const [verificationCode, setVerificationCode] = useState('');
+    const [isCaptchaChecked, setIsCaptchaChecked] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Handle form submission logic
+        console.log({ email, verificationCode, isCaptchaChecked });
+    };
+
+    return (
+        <div className="col-md-6">
+            <div className="form-container">
+                <div className="card-body">
+                    <h2 className="card-title text-center">REGISTRARSE</h2>
+                    <p className="text-center">
+                        Ya tienes cuenta? <a href="/login">Inicia Sesion</a>
+                    </p>
+                    <form onSubmit={handleSubmit} className="form">
+                        <div className="mb-3">
+                            <label className="form-label">Email</label>
+                            <input
+                                type="email"
+                                className="form-control"
+                                id="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <label className="form-label">Código de verificación</label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                id="verificationCode"
+                                value={verificationCode}
+                                onChange={(e) => setVerificationCode(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className="mb-3 form-check">
+                            <input
+                                type="checkbox"
+                                className="form-check-input"
+                                id="captchaCheck"
+                                checked={isCaptchaChecked}
+                                onChange={() => setIsCaptchaChecked(!isCaptchaChecked)}
+                            />
+                            <label className="form-label" >NiCaptcha</label>
+                        </div>
+                        <button type="submit" className="btn btn-primary w-100">Siguiente</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+const Register = () => {
+    return (
+        PlanetForm(RegisterForm)
+    );
+
+};
+export default Register;
