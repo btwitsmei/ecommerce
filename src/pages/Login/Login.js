@@ -1,5 +1,8 @@
+import imagePath from '../../assets/earth.png';
+
 export default function Login() {
     return(
-        <p>Página de Login</p>
+        
+        <img src={imagePath} alt="Earth" />
     );
 }
