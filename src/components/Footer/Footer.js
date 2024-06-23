@@ -1,11 +1,12 @@
 import "./Footer.css";
+import logo from "../../assets/images/big_logo.png";
 
 export default function Footer() {
     return(
         <footer className="footer">
             <div className="footer-columns">
-                <div className="footer-column">
-                    <h4>Yummy Food</h4>
+                <div className="footer-column" id="footer-logo">
+                    <img src={logo} alt="Yummy Food Logo" className="footer-logo"/>
                 </div>
                 <div className="footer-column">
                     <h4>Categorías</h4>

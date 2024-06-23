@@ -39,3 +39,12 @@
     font-size: calc(var(--font-size) - 2px);
     margin: 0;
 }
+
+.footer-logo {
+    text-align: center;
+    max-width: 80%;
+}
+
+#footer-logo {
+    text-align: right;
+}

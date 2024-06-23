@@ -15,6 +15,7 @@
   .category, .product {
     text-align: center;
     font-size: calc(var(--font-size) + 2px);
+    color: var(--text-color);
   }
   
   .category-image, .product-image {

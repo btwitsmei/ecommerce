@@ -3,10 +3,11 @@ import { BiSolidReceipt } from "react-icons/bi";
 import { BiSolidUser } from "react-icons/bi";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAttention } from "../../assets/contexts/AttentionContext";
+import { useAuth } from "../../assets/contexts/AuthContext";
 
 import SearchBar from "../SearchBar/SearchBar";
+import logo from "../../assets/images/extended_logo.png";
 import "./Header.css";
-import { useAuth } from "../../assets/contexts/AuthContext";
 
 export default function Header({loggedIn}) {
     const navigate = useNavigate();
