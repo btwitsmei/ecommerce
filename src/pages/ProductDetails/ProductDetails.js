@@ -10,7 +10,7 @@ export default function ProductDetails() {
             name: "Ensalada de rocas lunares",
             price: 24.90,
             description: "descripcion 1",
-            image: "link_to_image",
+            image: "https://www.tapasmagazine.es/wp-content/uploads/2023/06/plato-chino-con-piedras-suodiu.jpg",
         },
         {
             id: 2,
@@ -24,7 +24,7 @@ export default function ProductDetails() {
             name: "Bebida GoSpace",
             price: 2.90,
             description: "descripcion 3",
-            image: "link_to_image",
+            image: "https://cdna.artstation.com/p/assets/images/images/052/826/506/large/kaylee-tbrender-002-50.jpg?1660758848",
         },
     ]);
 
