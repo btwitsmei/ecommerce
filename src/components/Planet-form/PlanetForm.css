@@ -100,5 +100,5 @@
     padding: 0;
     position: relative;
     left: -42%;
-    filter: grayscale(0%)
+    z-index: 0;
 }

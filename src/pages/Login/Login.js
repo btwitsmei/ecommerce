@@ -20,7 +20,7 @@ const LoginInformation = () => {
                         <label className="form-label">Contraseña</label>
                         <input type="password" name="password" className="form-control" />
                     </div>
-                    <button onClick={() => navigate("/")} type="submit" className="btn">Siguiente</button>
+                    <button onClick={() => navigate("/")} type="submit" className="btn"><span>Siguiente</span></button>
                     <p className='text-center'><a href="/new-password-email">Olvidó Contraseña</a></p>
 
                 </form>

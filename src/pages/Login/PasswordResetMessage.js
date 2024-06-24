@@ -11,7 +11,7 @@ function PasswordResetMessage() {
                 <div className="card-body">
                     <h2 className="card-title text-center">CONTRASEÑA ESTABLECIDA</h2>
                     
-                        <button onClick={() => navigate("/login")} type="submit" className="btn btn-primary w-100">Siguiente</button>
+                        <button onClick={() => navigate("/login")} type="submit" className="btn btn-primary w-100"><span>Siguiente</span></button>
                    
                 </div>
             </div>

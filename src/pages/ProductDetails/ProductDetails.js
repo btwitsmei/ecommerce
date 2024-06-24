@@ -43,7 +43,7 @@ export default function ProductDetails() {
                 <p> <img src={productDetail.image} alt={productDetail.name} /></p>
                 <p className="price"><b>Price:</b> {productDetail.price}</p>
                 <p className="desc"><b>Description:</b> {productDetail.description}</p><br/>
-                <button>Agregar al carrito</button>
+                <button><span>Agregar al carrito</span></button>
             </div>
             
         </div>

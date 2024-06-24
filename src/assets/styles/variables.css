@@ -65,6 +65,10 @@ body.saturacion::before {
     pointer-events: none; /* Para que no interfiera con la interacción */
 }
 
+body.saturacion img {
+    filter: grayscale(100%);
+}
+
 /* Estilo para quitar imágenes */
 body.quitar-imagenes img {
     display: none;

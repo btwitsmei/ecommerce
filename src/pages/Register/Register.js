@@ -57,7 +57,7 @@ function RegisterForm() {
                             />
                             <label className="form-label" >NiCaptcha</label>
                         </div>
-                        <button onClick={() => navigate("/register-complete")} type="submit" className="btn btn-primary w-100">Siguiente</button>
+                        <button onClick={() => navigate("/register-complete")} type="submit" className="btn btn-primary w-100"><span>Siguiente</span></button>
                     </form>
                 </div>
             </div>

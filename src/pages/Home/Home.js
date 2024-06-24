@@ -61,7 +61,7 @@ export default function Home() {
                                     <img src={item.image} alt={item.alt} />
                                     
                                     <div className="category">
-                                        <h3>{item.name}</h3>
+                                        <h3><p>{item.name}</p></h3>
                                     </div>
                                     
                                 </div>
@@ -87,7 +87,7 @@ export default function Home() {
                                     <img src={item.image} alt={item.alt} />
                                     
                                     <div className="product">
-                                        <h3>{item.name}</h3>
+                                        <h3><p>{item.name}</p></h3>
                                     </div>
                                     
                                 </div>

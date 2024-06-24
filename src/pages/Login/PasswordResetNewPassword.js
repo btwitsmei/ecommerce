@@ -21,7 +21,7 @@ function PasswordResetNewPassword() {
                         <label className="form-label">Repetir nueva contraseña</label>
                         <input type="password" name="confirmPassword" className="form-control" />
                     </div>
-                    <button onClick={() => navigate("/new-password-message")} type="submit" className="btn">Siguiente</button>
+                    <button onClick={() => navigate("/new-password-message")} type="submit" className="btn"><span>Siguiente</span></button>
                 </form>
             </div>
         </div>

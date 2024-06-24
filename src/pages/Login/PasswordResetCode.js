@@ -35,7 +35,7 @@ function PasswordResetCode() {
                             />
                         </div>
 
-                        <button onClick={() => navigate("/new-password-new")}type="submit" className="btn btn-primary w-100">Siguiente</button>
+                        <button onClick={() => navigate("/new-password-new")}type="submit" className="btn btn-primary w-100"><span>Siguiente</span></button>
                     </form>
                 </div>
             </div>
