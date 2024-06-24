@@ -52,6 +52,7 @@ body.alineacion-texto {
     text-align: center; /* Alineación del texto al centro */
 }
 
+
 /* Estilo para la saturación */
 body.saturacion::before {
     content: "";
