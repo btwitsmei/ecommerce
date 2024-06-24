@@ -26,36 +26,54 @@ export default function Home() {
         },
     ]);
 
+    const [categories] = useState([
+        {
+            id: 1,
+            name: "Promociones y ofertas",
+            alt: "Una foto de Promociones y ofertas",
+            image: "https://cuadernodemarketing.com/wp-content/uploads/2015/01/promocionesydescuentos.jpg",
+        },
+        {
+            id: 2,
+            name: "Planetas",
+            alt: "Una foto de planetas",
+            image: "https://imagenes.muyinteresante.com/files/image_670_447/uploads/2023/05/22/646b259c53bc8.jpeg",
+        },
+        {
+            id: 3,
+            name: "Popular",
+            alt: "Una foto de dos bebidas de la marca GoSpace",
+            image: "https://cdn-icons-png.freepik.com/512/7251/7251267.png?ga=GA1.1.1067070874.1719246083",
+        },
+    ]);
+
     return (
         <div className='content'>
         <div className="homepage">
             <main className="main-content">
                 <section className="popular-categories">
-                    <h2>CATEGORÍAS POPULARES</h2>
+                    <h2>CATEGORÍAS POPULARES</h2> 
                     <div className="categories">
-                        <div className="category">
-                            <div className="category-image" />
-                            <div className="category-name">
-                                Nombre de la categoría
-                            </div>
-                        </div>
-                        <div className="category">
-                            <div className="category-image" />
-                            <div className="category-name">
-                                Nombre de la categoría
-                            </div>
-                        </div>
-                        <div className="category">
-                            <div className="category-image" />
-                            <div className="category-name">
-                                Nombre de la categoría
-                            </div>
-                        </div>
+                    {categories.map((item) => (
+                            <button onClick={() => navigate("/categories/" + item.id)} key={item.id}>
+                                <div className="product-image">
+                                    
+                                    <img src={item.image} alt={item.alt} />
+                                    
+                                    <div className="category">
+                                        <h3>{item.name}</h3>
+                                    </div>
+                                    
+                                </div>
+                                </button>
+                            
+                        ))}
+                        
                     </div>
                 </section>
 
                 <br/>
-
+                <br/>
 
                 <section className="best-selling-products">
                     <h2>PRODUCTOS MÁS VENDIDOS</h2>

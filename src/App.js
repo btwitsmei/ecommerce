@@ -14,7 +14,14 @@ import OrderDetails from './pages/OrderDetails/OrderDetails';
 import ProductDetails from './pages/ProductDetails/ProductDetails';
 import AccessibilityButton from './components/Accessibility/AccessibilityButton';
 import Register from './pages/Register/Register';
+import RegisterCompleteInformation from './pages/Register/RegisterCompleteInformation';
 import Login from './pages/Login/Login';
+import NewPasswordMessage from './pages/Login/PasswordResetMessage';
+import NewPasswordEmail from './pages/Login/PasswordResetEmail';
+import NewPasswordCode from './pages/Login/PasswordResetCode';
+import NewPasswordPassword from './pages/Login/PasswordResetNewPassword';
+import CategoryDetails from './pages/CategoryDetail/CategoryDetail';
+import Payment from './pages/Payment/Payment';
 
 const SetAttention = ({att, children}) => {
   const {attention, setAttention} = useAttention();
@@ -44,7 +51,12 @@ function App() {
             <Routes>
               <Route path="/" element={<SetAttention att={false}><Home /></SetAttention>}/>
               <Route path="/login" element={<SetAttention att={true}><Login /></SetAttention>}/>
+              <Route path="/new-password-email" element={<SetAttention att={true}><NewPasswordEmail /></SetAttention>}/>
+              <Route path="/new-password-code" element={<SetAttention att={true}><NewPasswordCode /></SetAttention>}/>
+              <Route path="/new-password-new" element={<SetAttention att={true}><NewPasswordPassword /></SetAttention>}/>
+              <Route path="/new-password-message" element={<SetAttention att={true}><NewPasswordMessage /></SetAttention>}/>
               <Route path="/register" element={<SetAttention att={true}><Register /></SetAttention>}/>
+              <Route path="/register-complete" element={<SetAttention att={true}><RegisterCompleteInformation /></SetAttention>}/>
               <Route path="/cart" element={<SetAttention att={false}><Cart /></SetAttention>}/>
               
               <Route path="/orders" element={
@@ -72,8 +84,20 @@ function App() {
               }/>
 
               <Route path="/products/:id" element={
-                <ProtectedRoute>
+                
                   <SetAttention att={false}><ProductDetails /></SetAttention>
+                
+              }/>
+
+              <Route path="/categories/:id" element={
+                
+                  <SetAttention att={false}><CategoryDetails/></SetAttention>
+                
+              }/>
+
+              <Route path="/order/payment" element={
+                <ProtectedRoute>
+                  <SetAttention att={false}><Payment /></SetAttention>
                 </ProtectedRoute>
               }/>
               

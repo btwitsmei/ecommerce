@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import './Register.css';
 import PlanetForm from '../../components/Planet-form/PlanetForm';
+import { useNavigate } from "react-router-dom";
+
+
+
 function RegisterForm() {
     const [email, setEmail] = useState('');
     const [verificationCode, setVerificationCode] = useState('');
     const [isCaptchaChecked, setIsCaptchaChecked] = useState(false);
-
+    const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission logic
@@ -16,8 +20,8 @@ function RegisterForm() {
         <div className="col-md">
             <div className="form-container">
                 <div className="card-body">
-                    <h2 className="card-title text-center">REGISTRARSE</h2>
-                    <p className="text-center">
+                    <h2 className="card-title">REGISTRARSE</h2>
+                    <p >
                         Ya tienes cuenta? <a href="/login">Inicia Sesion</a>
                     </p>
                     <form onSubmit={handleSubmit} className="form">
@@ -53,7 +57,7 @@ function RegisterForm() {
                             />
                             <label className="form-label" >NiCaptcha</label>
                         </div>
-                        <button type="submit" className="btn btn-primary w-100">Siguiente</button>
+                        <button onClick={() => navigate("/register-complete")} type="submit" className="btn btn-primary w-100">Siguiente</button>
                     </form>
                 </div>
             </div>

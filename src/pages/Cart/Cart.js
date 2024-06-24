@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./Cart.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
     const [timeEnvio, setTimeEnvio] = useState(false);
+    const navigate = useNavigate();
     const [cartItems, setCartItems] = useState([
         {
             id: 1,
@@ -132,7 +134,7 @@ export default function Cart() {
                         <option value="1">Pago en Línea</option>
                     </select>
                 </div>
-                <button className="checkout-button">Comprar</button>
+                <button className="checkout-button" onClick={()=>navigate("/order/payment")}>Comprar</button>
             </div>
         </div>
         </div>

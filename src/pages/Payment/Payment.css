@@ -1,0 +1,45 @@
+.payment {
+    background-color: var(--primary-color);
+    width: 50%;
+    margin: 0 25%;
+    padding: 2%;
+    border-radius: 2rem;
+    border: 1px solid var(--secondary-color);
+    margin-bottom: 2%;
+}
+
+.payment-form {
+    display: block;
+}
+
+.payment-form input {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+.payment-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+}
+
+.payment label {
+    font-weight: bold;
+}
+
+.payment-fila {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pay-extra{
+    width: 45%;
+}
+
+.div-pay-button {
+    text-align: center;
+}
+
