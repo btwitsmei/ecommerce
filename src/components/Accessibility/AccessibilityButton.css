@@ -1,4 +1,4 @@
-.AButton {
+.AccesibilityButton {
     background-color: var(--action-color);
     color: black;
     border: 0;
@@ -12,7 +12,7 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.AButton:first-child {
+.AccesibilityButton:first-child {
     font-size: 2em;
 }
 

@@ -9,16 +9,19 @@ export default function Home() {
         {
             id: 1,
             name: "Ensalada de rocas lunares",
+            alt: "Una foto de una Ensalada de rocas lunares",
             image: "https://www.tapasmagazine.es/wp-content/uploads/2023/06/plato-chino-con-piedras-suodiu.jpg",
         },
         {
             id: 2,
             name: "Tallarin de Kalamari",
+            alt: "Una foto de un plato de Tallarin de Kalamari",
             image: "https://media.licdn.com/dms/image/D4D12AQH6pZSSpjla3A/article-inline_image-shrink_1000_1488/0/1679606233057?e=1723680000&v=beta&t=cbvAxi9VatABV-bB_xLanBvydoNdPSm7TE8K_jpIR5k",
         },
         {
             id: 3,
             name: "Bebida GoSpace",
+            alt: "Una foto de dos bebidas de la marca GoSpace",
             image: "https://cdna.artstation.com/p/assets/images/images/052/826/506/large/kaylee-tbrender-002-50.jpg?1660758848",
         },
     ]);
@@ -63,10 +66,10 @@ export default function Home() {
                             <button onClick={() => navigate("/products/" + item.id)} key={item.id}>
                                 <div className="product-image">
                                     
-                                    <img src={item.image} alt={item.name} />
+                                    <img src={item.image} alt={item.alt} />
                                     
                                     <div className="product">
-                                        <h4>{item.name}</h4>
+                                        <h3>{item.name}</h3>
                                     </div>
                                     
                                 </div>

@@ -76,7 +76,7 @@ export default function AccessibilityButton(props) {
 
     return (
         <div className="Accessibility">
-            <button onClick={handleButtonClick} className="AButton">
+            <button onClick={handleButtonClick} className="AccesibilityButton" aria-label="AccesibilityButton">
                 <IoEyeOutline />
             </button>
             {menuOpen && (
@@ -91,7 +91,7 @@ export default function AccessibilityButton(props) {
                         </button>
                     </div>
                     <div className="AMenuContent">
-                        <div className="AMC-Select">
+                        {/* <div className="AMC-Select">
                             <p>Daltonismo</p>
                             <select>
                                 <option>Ninguno</option>
@@ -99,7 +99,7 @@ export default function AccessibilityButton(props) {
                                 <option>Deuteranomalía</option>
                                 <option>Tritanomalía</option>
                             </select>
-                        </div>
+                        </div> */}
                         <div className="grid-container">
                             {buttons.map((button) => (
                                 <button

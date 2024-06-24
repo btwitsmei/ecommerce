@@ -23,7 +23,7 @@
     border: 1px var(--text-color) solid;
 }
 
-.boton-searchbar {
+.SearchButton {
     background-color: var(--primary-color);
     color: var(--text-color);
     border: 0;
